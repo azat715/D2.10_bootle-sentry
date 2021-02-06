@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "bottle-sentry"
+name = "D2.10_bottle_sentry"
 version = "0.1.0"
 description = ""
 authors = ["azat715 <azat715@gmail.com>"]
