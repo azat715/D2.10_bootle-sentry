@@ -2,7 +2,7 @@ import logging
 from os import environ
 
 import sentry_sdk
-from bottle import HTTPError, request, route, template, default_app
+from bottle import HTTPError, request, route, template, default_app, HTTPResponse
 from sentry_sdk.integrations.bottle import BottleIntegration
 
 env = environ
@@ -15,16 +15,17 @@ logging.basicConfig(
 
 default_app.push()
 
-
 @route("/success")
 def success():
+    logging.info("/success")
     logging.info(request.headers.get("User-Agent"))
     logging.info(request.headers.get("Host"))
-    return template("<b>Hello {{name}}</b>!", name="Success")
-
+    theBody = template("<b>Hello {{name}}</b>!", name="Success")
+    return HTTPResponse(status=200, body=theBody)
 
 @route("/error")
 def error_():
+    logging.info("/error")
     logging.info(request.headers.get("User-Agent"))
     logging.info(request.headers.get("Host"))
     return HTTPError(500, "Error, ошибка сервера")
@@ -32,6 +33,7 @@ def error_():
 
 @route("/fail")
 def fail():
+    logging.info("/fail")
     logging.info(request.headers.get("User-Agent"))
     logging.info(request.headers.get("Host"))
     raise RuntimeError("There is an error!")
