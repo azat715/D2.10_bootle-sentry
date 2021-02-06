@@ -22,5 +22,5 @@ bottle.postman_collection.json - коллекция postman
 
 api.md - api документация
 
-адрес моего приложения https://radiant-sierra-83823.herokuapp.com
+адрес моего приложения https://stark-coast-45680.herokuapp.com/
 
