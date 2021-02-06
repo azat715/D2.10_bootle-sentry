@@ -1,1 +1,1 @@
-web: gunicorn bootle_sentry.run:app
+web: gunicorn bottle_sentry.run:app
