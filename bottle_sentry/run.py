@@ -20,8 +20,7 @@ def success():
     logging.info("/success")
     logging.info(request.headers.get("User-Agent"))
     logging.info(request.headers.get("Host"))
-    theBody = template("<b>Hello {{name}}</b>!", name="Success")
-    return HTTPResponse(status=200, body=theBody)
+    return HTTPResponse(status=200)
 
 @route("/error")
 def error_():
