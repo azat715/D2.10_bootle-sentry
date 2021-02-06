@@ -10,3 +10,17 @@
 локальный запуск 
 
 ```poetry run gunicorn -w 2 -b 127.0.0.1:8080 bootle_sentry.run:app```
+
+## развертывание (деплой) 
+
+
+по инструкции https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app
+
+необходимо установить heroku config:set SENTRY_DSN={SENTRY_DSN}
+
+bottle.postman_collection.json - коллекция postman
+
+api.md - api документация
+
+адрес моего приложения https://radiant-sierra-83823.herokuapp.com
+

@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "63cf9e7b-0bc2-4dd1-a961-066ec52e1f94",
+		"name": "bottle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/success",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"success"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/error",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"error"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/fail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"fail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
