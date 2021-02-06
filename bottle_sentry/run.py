@@ -20,7 +20,8 @@ def success():
     logging.info("/success")
     logging.info(request.headers.get("User-Agent"))
     logging.info(request.headers.get("Host"))
-    return HTTPResponse(status=200)
+    return HTTPResponse(status_line="200 OK", status_code=200)
+    
 
 @route("/error")
 def error_():
